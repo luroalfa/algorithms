@@ -1,8 +1,9 @@
 Proceso NumeroAleatorioSinRepetir
-	definir vector, numberRandom, r, c como entero;
+	definir vector como entero;
 	definir repeat Como Logico;
 	Dimension vector[5];	
-	
+	generateRandomNumbers(vector);
+	printVector(vector);
 FinProceso
 
 SubProceso generateRandomNumbers(vector)
@@ -21,6 +22,13 @@ SubProceso generateRandomNumbers(vector)
 			FinSi
 		Hasta Que repeat = falso
 		vector[r] = numberRandom;//Add to vector
+	FinPara
+FinSubProceso
+
+SubProceso printVector(vector)
+	Definir r Como Entero;
+	Para r<-0 Hasta 4 Hacer
+		Escribir vector[r];
 	FinPara
 FinSubProceso
 	

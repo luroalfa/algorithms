@@ -1,13 +1,14 @@
+//Metodo de la burbuja mejorada.
 Algoritmo BubbleMethod
 	Definir vector Como Entero;
 	Dimension vector[4];
-	vector[0]=30;
-	vector[1]=9;
-	vector[2]=19;
-	vector[3]=1;
+	fillVector(vector, 4);
 	sortVector(vector,4);
 	printVector(vector);
 FinAlgoritmo
+///@Params: vector, limit
+///This subprocess is responsible for sorting the vector with the enhanced bubble method.
+///Return: nothing
 SubProceso sortVector(vector,limit)
 	definir x, aux como entero;
 	Definir flag Como Logico;	
@@ -23,10 +24,21 @@ SubProceso sortVector(vector,limit)
 		Fin Para
 	Hasta Que (flag = Falso) 
 FinSubProceso
-
+///@Params: vector
+///This vector is responsible for showing the vector. 
+///Return: nothing.
 SubProceso printVector(vector)
 	Definir r Como Entero;
 	Para r<-0 Hasta 3 Hacer
 		Escribir vector[r];
+	FinPara
+FinSubProceso
+///@Params: vector, limit.
+///This vector is responsible for filling the vector with random numbers.
+///Return: nothing.
+SubProceso fillVector(vector, limit)
+	Definir r Como Entero;
+	Para r<-0 Hasta limit-1 Hacer
+		vector[r] = azar(limit);
 	FinPara
 FinSubProceso

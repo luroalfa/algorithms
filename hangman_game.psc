@@ -64,8 +64,6 @@ Algoritmo Ahorcado
 		Winner(wordBank,definition, numAzar);
 	FinSi
 FinAlgoritmo
-
-
 SubProceso Opportunity1()
 	Escribir "______  ups!";
 	Escribir "|/   |";

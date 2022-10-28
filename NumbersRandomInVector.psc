@@ -1,12 +1,13 @@
 Proceso NumeroAleatorioSinRepetir
 	definir vector como entero;
-	definir repeat Como Logico;
 	Dimension vector[75];	
 	generateRandomNumbers(vector);
 	sortVector(vector,75);
 	printVector(vector);
 FinProceso
-
+///@Params: vector
+///This subprocess is responsible for generate random numbers.
+///Return: nothing.
 SubProceso generateRandomNumbers(vector)
 	definir numberRandom, r, c como entero;
 	definir repeat Como Logico;
@@ -25,14 +26,18 @@ SubProceso generateRandomNumbers(vector)
 		vector[r] = numberRandom;//Add to vector
 	FinPara
 FinSubProceso
-
+///@Params: vector
+///This vector is responsible for showing the vector. 
+///Return: nothing.
 SubProceso printVector(vector)
 	Definir r Como Entero;
 	Para r<-0 Hasta 74 Hacer
 		Escribir vector[r];
 	FinPara
 FinSubProceso
-
+///@Params: vector, limit
+///This subprocess is responsible for sorting the vector with the enhanced bubble method.
+///Return: nothing
 SubProceso sortVector(vector,limit)
 	definir x, aux como entero;
 	Definir flag Como Logico;	
